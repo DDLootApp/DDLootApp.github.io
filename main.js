@@ -23,199 +23,10 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./src/app/app-routing.module.ts":
-/*!***************************************!*\
-  !*** ./src/app/app-routing.module.ts ***!
-  \***************************************/
-/*! exports provided: AppRoutingModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _monsters_monsters_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./monsters/monsters.component */ "./src/app/monsters/monsters.component.ts");
-/* harmony import */ var _monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./monster-detail/monster-detail.component */ "./src/app/monster-detail/monster-detail.component.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-var routes = [
-    { path: '', redirectTo: '/monsters', pathMatch: 'full' },
-    { path: 'detail/:id', component: _monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_3__["MonsterDetailComponent"] },
-    { path: 'monsters', component: _monsters_monsters_component__WEBPACK_IMPORTED_MODULE_2__["MonstersComponent"] }
-];
-var AppRoutingModule = /** @class */ (function () {
-    function AppRoutingModule() {
-    }
-    AppRoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
-        })
-    ], AppRoutingModule);
-    return AppRoutingModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/app.component.css":
-/*!***********************************!*\
-  !*** ./src/app/app.component.css ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n\n  .center-div\n  {\n       margin: 0 auto;\n       max-width: 700px;\n  }\n\n  a{\n     font-family: 'Marcellus SC', serif;\n   }\n\n  input \n   { \n     text-align: center;\n   }\n\n  input[type=text]:focus {\n    \n    text-align: center;\n  }\n\n  #navBarSearchForm input[type=text]\n  {width:300px !important;}"
-
-/***/ }),
-
-/***/ "./src/app/app.component.html":
-/*!************************************!*\
-  !*** ./src/app/app.component.html ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  <link href=\"https://fonts.googleapis.com/css?family=Marcellus+SC\" rel=\"stylesheet\">\n  <title>Document</title>\n</head>\n\n<body>\n\n  <nav class=\"navbar navbar-dark bg-dark justify-content-between\">\n    <a class=\"navbar-brand\" href=\"#\">D&D Unique Monster Loot App</a>\n    <form class=\"form-inline\" id=\"navBarSearchForm\">\n      <input class=\"form-control mr-sm-2\" type=\"text\" [(ngModel)]=\"name\" placeholder=\"Search Monsters Here...\" aria-label=\"Search\" (input)=\"Search()\" >\n    </form>\n  </nav>\n  <br>\n  <router-outlet></router-outlet>\n\n</body>\n\n</html>\n"
-
-/***/ }),
-
-/***/ "./src/app/app.component.ts":
-/*!**********************************!*\
-  !*** ./src/app/app.component.ts ***!
-  \**********************************/
-/*! exports provided: AppComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _monster_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./monster.service */ "./src/app/monster.service.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var AppComponent = /** @class */ (function () {
-    function AppComponent(monsterService) {
-        this.monsterService = monsterService;
-        this.title = 'Loot App';
-        this.monsters = [];
-    }
-    AppComponent.prototype.ngOnInit = function () {
-        this.getMonsters();
-    };
-    AppComponent.prototype.getMonsters = function () {
-        var _this = this;
-        this.monsterService.getMonsters()
-            .subscribe(function (monsters) { return _this.monsters = monsters; });
-    };
-    AppComponent.prototype.Search = function () {
-        var _this = this;
-        if (this.name != "") {
-            this.monsters = this.monsters.filter(function (res) {
-                return res.name.toLocaleLowerCase().match(_this.name.toLocaleLowerCase());
-            });
-        }
-        else if (this.name == "") {
-            this.ngOnInit();
-        }
-    };
-    AppComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
-            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        }),
-        __metadata("design:paramtypes", [_monster_service__WEBPACK_IMPORTED_MODULE_1__["MonsterService"]])
-    ], AppComponent);
-    return AppComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/app.module.ts":
-/*!*******************************!*\
-  !*** ./src/app/app.module.ts ***!
-  \*******************************/
-/*! exports provided: AppModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _monsters_monsters_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./monsters/monsters.component */ "./src/app/monsters/monsters.component.ts");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./monster-detail/monster-detail.component */ "./src/app/monster-detail/monster-detail.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _monster_list_monster_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./monster-list/monster-list.component */ "./src/app/monster-list/monster-list.component.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-var AppModule = /** @class */ (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                _monsters_monsters_component__WEBPACK_IMPORTED_MODULE_3__["MonstersComponent"],
-                _monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_5__["MonsterDetailComponent"],
-                _monster_list_monster_list_component__WEBPACK_IMPORTED_MODULE_7__["MonsterListComponent"],
-            ],
-            imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
-            ],
-            providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
-        })
-    ], AppModule);
-    return AppModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/mock-monsters.ts":
-/*!**********************************!*\
-  !*** ./src/app/mock-monsters.ts ***!
-  \**********************************/
+/***/ "./src/app/MonsterManual/mock-monsters.ts":
+/*!************************************************!*\
+  !*** ./src/app/MonsterManual/mock-monsters.ts ***!
+  \************************************************/
 /*! exports provided: MONSTERS */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -252,7 +63,7 @@ var MONSTERS = [
                 id: 4,
                 itemName: 'Bag of Assorted Gems',
                 description: 'A bag filled with a random assortment of gems ranging from sapphires to rubies',
-                price: '100gp',
+                price: '500gp',
                 rarity: 'Rare'
             },
             {
@@ -364,28 +175,28 @@ var MONSTERS = [
                 id: 2,
                 itemName: 'Vacuum Potion',
                 description: 'You gather enough parts of the Aboleth to make a potion that allows you to survive in a vaccum for 10min',
-                price: '100gp',
+                price: '800gp',
                 rarity: 'Rare'
             },
             {
                 id: 3,
                 itemName: 'Aboleth Teeth',
                 description: 'You gather 10 Aboleth teeth, about the size of your forearm',
-                price: '100gp',
+                price: '500gp',
                 rarity: 'Rare'
             },
             {
                 id: 4,
                 itemName: 'Aboleth Mucus',
                 description: 'This mucus can be crafted into a terrible posion that causes an effect similar to the Aboleths tentacle attack',
-                price: '100gp',
+                price: '650gp',
                 rarity: 'Rare'
             },
             {
                 id: 5,
                 itemName: 'Aboleth Tentacles',
                 description: 'Extremely felxible and maleable tentacles that could be used to make a +2 magical whip',
-                price: '300gp',
+                price: '1,000gp',
                 rarity: 'Rare'
             },
             {
@@ -406,21 +217,21 @@ var MONSTERS = [
                 id: 8,
                 itemName: 'Stone of Golorr',
                 description: 'A pale green stone with three eyes',
-                price: '5000gp',
+                price: '50,000gp',
                 rarity: 'Legendary'
             },
             {
                 id: 9,
                 itemName: 'Enslaving Eye',
                 description: 'The central eye of the Aboleth allows the holder to use the Aboleths enslave ability once per day.',
-                price: '1000',
+                price: '10,000',
                 rarity: 'Very Rare'
             },
             {
                 id: 10,
                 itemName: 'Probing Eye',
                 description: 'The lower eye of the Aboleth, grants the holder telepathy within 1 mile. If the target of telepathy is within eye site then the user knows the targets greatest desire.',
-                price: '5000gp',
+                price: '50,000gp',
                 rarity: 'Legendary'
             }
         ],
@@ -433,21 +244,21 @@ var MONSTERS = [
                 id: 1,
                 itemName: 'Angelic Mace',
                 description: 'A heavenly weapon that does an additional 4D8 radiant damage. When wielded by a creature of a different alignment, and a natural 1 is rolled, the user takes 4D8 radiant damamge.',
-                price: '500gp',
+                price: '25,000gp',
                 rarity: 'Very Rare'
             },
             {
                 id: 2,
                 itemName: 'Blessed Gauntlets',
                 description: 'When a creature of similar alignment as the Deva wears the gauntlets they gain +1 to their AC and attacks',
-                price: '300gp',
+                price: '3,000gp',
                 rarity: 'Rare'
             },
             {
                 id: 3,
                 itemName: 'Feather of Truth',
                 description: 'The Devas feathers compel evil to confess. The holder may use the zone of truth spell once. After the feather is consumed in holy flames.',
-                price: '100gp',
+                price: '200gp',
                 rarity: 'Uncommon'
             },
         ],
@@ -460,29 +271,29 @@ var MONSTERS = [
                 id: 1,
                 itemName: 'Holy Greatsword',
                 description: 'A heavenly greatsword that does an additional 5D8 radiant damage. When wielded by a creature of a different alignment, and a natural 1 is rolled the user takes 5D8 radiant damamge.',
-                price: '700gp',
-                rarity: 'Rare'
+                price: '10,000gp',
+                rarity: 'Very Rare'
             },
             {
                 id: 2,
                 itemName: 'Tongue of the Planetar',
                 description: 'This item allows the holder to cast the spell Zone of Truth 3 times a day',
-                price: '500gp',
+                price: '1,000gp',
                 rarity: 'Rare'
             },
             {
                 id: 3,
                 itemName: 'Vial of Planetar Blood',
                 description: 'This vial of sacred blood heals the drinker 30 (6D8+3) hit points and cures any disease or conditions placed on the drinker',
-                price: '300gp',
+                price: '700gp',
                 rarity: 'Rare'
             },
             {
                 id: 3,
                 itemName: 'Gauntlets of the Planetar',
                 description: 'Allows the user to cast detect good and evil 3 times a day, and invisibility once per day',
-                price: '5000gp',
-                rarity: 'Legendary'
+                price: '5,000gp',
+                rarity: 'Rare'
             },
             {
                 id: 4,
@@ -495,28 +306,28 @@ var MONSTERS = [
                 id: 5,
                 itemName: 'Sash of the Planetar',
                 description: 'If the wearer is the same alignment of the Planetar, wearing this sash grants the user advantage on all saving throws against spells and other magical effects',
-                price: '800gp',
+                price: '8,000gp',
                 rarity: 'Very Rare'
             },
             {
                 id: 6,
                 itemName: 'Eyes of the Planetar',
                 description: 'Though very difficult to remove these can be used to gain True Sight for a number of rounds equal to the users wisdom modifier',
-                price: '1000gp',
+                price: '7,000gp',
                 rarity: 'Very Rare'
             },
             {
                 id: 7,
                 itemName: 'Potion of Truesight',
                 description: 'The Planetars feathers can be crafted to create a potion of true sight. This potion can be used by those of celestial heritage or good alignment. Otherwise it deals 3D6 radiant damage on consumption and grants blindness for 1 hour',
-                price: '50gp',
+                price: '500gp',
                 rarity: 'Uncommon'
             },
             {
                 id: 8,
                 itemName: 'Sun Blade',
                 description: 'A longsword burning with radiant energy',
-                price: '250gp',
+                price: '1000gp',
                 rarity: 'Rare'
             }
         ],
@@ -529,28 +340,28 @@ var MONSTERS = [
                 id: 1,
                 itemName: 'Holy Greatsword',
                 description: 'A heavenly greatsword that does an additional 6D8 radiant damage. When wielded by a creature of a different alignment, and a natural 1 is rolled the user takes 4D8 radiant damamge',
-                price: '700gp',
-                rarity: 'Rare'
+                price: '7,000gp',
+                rarity: 'Very Rare'
             },
             {
                 id: 2,
                 itemName: 'Slaying Longbow',
                 description: 'A heavenly longbow that does an additional 6D8 radiant damage. If the target of an attack with this weapon is of an evil alignment and is below 100 hitpoints they must pass a DC 15 constitution save or instantly die. When wielded by a creature of a different alignment, and a natural 1 is rolled the user takes 6D8 radiant damamge. If the user is below 100 hitpoints they must make a DC 15 constitution saving throw or instantly die',
-                price: '7000gp',
+                price: '70,000gp',
                 rarity: 'Legendary'
             },
             {
                 id: 3,
                 itemName: 'Flying Sword',
                 description: 'A celestial sword that can be commanded to fly 50ft, make one attack, then return to the users hand. This can be done as a bonus action. The sword does 4D6 slashing damage and 3D8 radiant damage',
-                price: '2000gp',
+                price: '20,000gp',
                 rarity: 'Very Rare'
             },
             {
                 id: 4,
                 itemName: 'Vial of Solar Blood',
                 description: 'This vial of sacred blood heals the drinker 30 (8D8+3) hit points and cures any disease or conditions placed on the drinker',
-                price: '300gp',
+                price: '3,000gp',
                 rarity: 'Rare'
             },
             {
@@ -564,7 +375,7 @@ var MONSTERS = [
                 id: 6,
                 itemName: 'Sash of the Solar',
                 description: 'If the wearer is the same alignment of the Solar, wearing this sash grants the user advantage on all saving throws against spells and other magical effects',
-                price: '800gp',
+                price: '1,000gp',
                 rarity: 'Rare'
             },
             {
@@ -578,14 +389,14 @@ var MONSTERS = [
                 id: 8,
                 itemName: 'Tongue of the Solar',
                 description: 'This item allows the holder to cast the spell Zone of Truth at will',
-                price: '5000gp',
+                price: '5,000gp',
                 rarity: 'Very Rare'
             },
             {
                 id: 9,
                 itemName: 'Amulet of the Solar',
                 description: 'This amulet burning with celestial fire allows the user to teleport 120 ft 3 times a day',
-                price: '500gp',
+                price: '1,000gp',
                 rarity: 'Rare'
             }
         ],
@@ -612,7 +423,7 @@ var MONSTERS = [
                 id: 3,
                 itemName: 'Control Rune',
                 description: 'Inside the Animated armor is a stone with a magical rune drawn on it. It allows the holder to command the suit of Animated Armor after repairing it',
-                price: '500gp',
+                price: '800gp',
                 rarity: 'Rare'
             },
             {
@@ -639,7 +450,7 @@ var MONSTERS = [
                 id: 2,
                 itemName: 'Control Rune',
                 description: 'A small chunk of the pommel comes off allowing the holder to control the Flying Sword',
-                price: '500gp',
+                price: '1,000gp',
                 rarity: 'Rare'
             }
         ],
@@ -659,7 +470,7 @@ var MONSTERS = [
                 id: 2,
                 itemName: 'String of Control',
                 description: 'Hidden in the weave of the rug is a magic cord of string that allows the holder to control the rug of smothering',
-                price: '100gp',
+                price: '700gp',
                 rarity: 'Rare'
             },
             {
@@ -673,7 +484,7 @@ var MONSTERS = [
                 id: 4,
                 itemName: 'Weathered Rug',
                 description: 'The rug is in relative good shape, if repaired it can become a carpet of flying',
-                price: '300gp',
+                price: '600gp',
                 rarity: 'Rare'
             }
         ],
@@ -686,14 +497,14 @@ var MONSTERS = [
                 id: 1,
                 itemName: 'Vial of Ankheg Acid',
                 description: 'A potent acid created from the Ankheg. It deals 3D6 acid damage',
-                price: '50gp',
+                price: '300gp',
                 rarity: 'Uncommon'
             },
             {
                 id: 2,
                 itemName: 'Ankheg Claws',
                 description: 'If carefully crafted these claws can become Ankheg digging gauntlets, granting the wearer a burrowing speed of 20ft',
-                price: '300gp',
+                price: '600gp',
                 rarity: 'Rare'
             },
             {
@@ -707,8 +518,8 @@ var MONSTERS = [
                 id: 4,
                 itemName: 'Ankheg Eggs',
                 description: 'You find 5 Ankheg eggs. If the eggs are nurtured they may hatch baby ankhegs',
-                price: '25gp Each',
-                rarity: 'Uncommon'
+                price: '150gp Each',
+                rarity: 'Rare'
             }
         ],
         imageUrl: "https://i.pinimg.com/originals/d4/5b/4b/d45b4b0726c5843a5d6057a08119fda8.jpg"
@@ -727,7 +538,7 @@ var MONSTERS = [
                 id: 2,
                 itemName: 'Azer Heart',
                 description: 'A heart in the form of volcanic rock. A creature that touches or melee attacks the holder of the Azers heart takes 1D10 fire damage',
-                price: '100gp',
+                price: '1,000gp',
                 rarity: 'Rare'
             },
             {
@@ -3124,15 +2935,886 @@ var MONSTERS = [
         ],
         imageUrl: "https://s-media-cache-ak0.pinimg.com/originals/11/4d/6e/114d6ea23631f49cc751aa110247e130.jpg"
     },
+    { id: 49,
+        name: 'Vrock',
+        loot: [
+            {
+                id: 1,
+                itemName: 'A Collection of Cheap Jewelry',
+                description: 'A collection of fake gold rings, guady necklaces, and fake precious stones',
+                price: '100gp',
+                rarity: 'Common'
+            },
+            {
+                id: 2,
+                itemName: 'Sack of Flesh',
+                description: 'The Vrock carries a sack of flesh to snack on',
+                price: '2gp',
+                rarity: 'Common'
+            },
+            {
+                id: 3,
+                itemName: 'A Golden Crown',
+                description: 'A finely crafted gold crown fit for a king. Where did it get something this nice?',
+                price: '400gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 4,
+                itemName: 'A Treasure Map',
+                description: 'A crudely drawn treasure map. Some of the landmarks look familiar though',
+                price: '50gp',
+                rarity: 'Common'
+            },
+            {
+                id: 5,
+                itemName: 'Feathers and Beaks of Rival Vrocks',
+                description: 'A handful of beaks and feathers from rival Vrocks it has defeated for its treasure trove',
+                price: '2gp',
+                rarity: 'Common'
+            },
+            {
+                id: 6,
+                itemName: 'Vrock Spores',
+                description: 'You collect 1d4 spores. These spores can be collected in vials and thrown at enemies. The vial breaks in a 15 ft radius and every creature must make a DC 14 Constitution saving throw or be posioned. In addition they take 1d10 damage each round. A target may repeat the saving throw at the end of its turn to negate',
+                price: '100gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 7,
+                itemName: 'Vrock Beak',
+                description: 'This beak can be crafted into a magical horn that when blown creates a stunning screech. All creatures within 20ft must make a DC 14 Constitution saving throw or be stunned until the horn blowers next turn',
+                price: '300gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 8,
+                itemName: 'Vrock Wings',
+                description: 'These wings can be magically crafted to grant the user a 60 ft flying speed',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 9,
+                itemName: 'Vrock Feathers',
+                description: 'These feathers can be crafted into feathers of feather fall. Once used they are expended. Roll 1d6 for the number of magic feathers',
+                price: '100gp Each',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'Vrock Talons',
+                description: 'These talons can be crafted into +1 daggers that grant an additional 1d6 piercing or slashing damage when used in darkness',
+                price: '100gp',
+                rarity: 'Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 50,
+        name: 'Yochlol',
+        loot: [
+            {
+                id: 1,
+                itemName: 'A Handful of Spider Eggs',
+                description: 'A handful of spider eggs that seem dormant. If left in a warm location they will hatch summoning a spider swarm that attack the closest creature',
+                price: '10gp',
+                rarity: 'Common'
+            },
+            {
+                id: 2,
+                itemName: 'A Spider Shaped Pendant',
+                description: 'A small spider pendent with the words Lolth written on it. If the name is spoken the holder is transported to the Demonweb Pits',
+                price: '1000gp',
+                rarity: 'Very Rare'
+            },
+            {
+                id: 3,
+                itemName: 'Teachings of Lolth',
+                description: 'A slime covered manuscript that covers the teachings and religion of Lolth',
+                price: '50gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 4,
+                itemName: 'Yochol Slime',
+                description: 'The slime of the Yochol can be crafted into a potion that allows the drinker to transform into a female drow or a giant spider for 1 hour',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Yochol Slime',
+                description: 'The Yochols slime can be crafted into a potion of spider climb',
+                price: '200gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 6,
+                itemName: 'Yochol Slime',
+                description: 'The slime of the Yochol can be used to craft a toxic gas. When inhaled by a creature they must make a DC 14 Constitution saving throw or become incapacitated for 1d4 rounds',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 7,
+                itemName: 'Yochol Branch',
+                description: 'This branch can be crafted into a bracelet that allows the wearer to cast web 3 times a day',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 8,
+                itemName: 'Yochols Eye',
+                description: 'The Yochols eye can be crafted into a magical amulet that allows the wearer to use the detect thoughts spell 3 times a day and dominate person once a day',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 8,
+                itemName: 'Spider Venom',
+                description: 'Deadly spider venom that can fill one vial and be coated on a weapon. This poison deals 6d6 posion damage',
+                price: '300gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 9,
+                itemName: 'Yochol Tendrils',
+                description: 'The tendrils of the Yochol can be crafted into a magical +1 whip that automatically grapples the target on a successful attack',
+                price: '200gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'Order of Espionage',
+                description: 'Orders from a Priestess of Lolth asking the Yochol to infiltrate a local drow house and search for heresy',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 11,
+                itemName: 'Map of a Prison Camp',
+                description: 'A map marking the location of a drow prison camp. Will you save the slaves?',
+                price: '5gp',
+                rarity: 'Common'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 51,
+        name: 'Barbed Devil',
+        loot: [
+            {
+                id: 1,
+                itemName: 'A Map of a Devils Vault',
+                description: 'This map marks the location of a Devil Lords vault. What treasures could be amassed there?',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 2,
+                itemName: 'A Bag of Precious Gems',
+                description: 'A bag filled with rubies, sapphires, and other precious gems. A note hides under the stones saying, thank you for your service',
+                price: '750gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 3,
+                itemName: 'Barbed Devil Pelt',
+                description: 'The Barbed Devils pelt can create a set of +1 studded leather armor that deals 1d10 piercing damage to a creature that grapples or melee attacks the wearer',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 4,
+                itemName: 'Barbed Devil Claw',
+                description: 'This claw can be crafted into a magical gauntlet that allows the wearer to throw a ball of flame with a range of 150ft and deals 3d6 fire damage',
+                price: '450gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Barbed Devil Spikes',
+                description: 'The spikes of the Barbed Devil can be attatched to a gauntlet creating a Pata that deals 2d6 piercing damage',
+                price: '200gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 6,
+                itemName: 'Barbed Devil Spikes',
+                description: 'These barbed devil spikes can be used to create +1 darts. Roll a 1d20 for spike amount',
+                price: '1gp per spike',
+                rarity: 'Common'
+            },
+            {
+                id: 7,
+                itemName: 'Orders to Defend a Portal',
+                description: 'A devil lord plans to take townsfolk prisoners and has assigned this devil to protect the portal. The orders specify the portals location',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 8,
+                itemName: 'Barbed Devil Eyes',
+                description: 'The devils eyes can be crafted into goggles that allow the wearer to see through magical darkness',
+                price: '450gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 9,
+                itemName: 'Barbed Devil Tail',
+                description: 'The tail can be hardned and crafted into a +1 javelin that deals 2d6 piercing damage. The damage is doubled against creatures of the celestial type',
+                price: '150gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'A Job Proposition',
+                description: 'A devil lord seeks the barbed devil for a particular job and promises a great reward. Will you accept instead?',
+                price: '5gp',
+                rarity: 'Common'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 52,
+        name: 'Bearded Devil',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Deadly Glaive',
+                description: 'A deadly glaive covered in infernal runes. This glaive seems to tear into flesh more then slice it. This glaive has the same stats and abilities as the Beareded Devils Glaive',
+                price: '300gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 2,
+                itemName: 'Beard Venom',
+                description: 'This venom can be coated on a weapon. Any creature attacked with a weapon coated with this poison must make a DC 12 Constitution saving throw or become poisoned for 1 minute. They also cant regain hit points. The target may repeat the saving throw at the end of its turn',
+                price: '100gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 3,
+                itemName: 'Bearded Devil Blood',
+                description: 'If the blood of the devil is drunk, the drinker becomes a half devil. Once a day it may grow the bearded devils beard and use its beard attack as a bonus action. After combat the target takes a level of exhaustion',
+                price: '200gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 4,
+                itemName: 'Devil Eyes',
+                description: 'These devil eyes can be crafted into magical goggles that allow the wearer to see in magical darkness',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Trophies of Past Victories',
+                description: 'Demon horns, ancient pieces of armor, teeth of giant creatures and more fill this devils bag. Trophies from past battles won',
+                price: '750gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 6,
+                itemName: 'Devils Blood',
+                description: 'This blood can be crafted into a potion that grants immunity to being frightened',
+                price: '150gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 7,
+                itemName: 'Orders to Muster',
+                description: 'Inside a scroll are the orders to rally back to the devils base camp for an attack on a nearby town. Will you stop the devil or warn the town?',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 8,
+                itemName: 'A Call for Mercenaries',
+                description: 'The devil has a scroll on it asking to find powerful warriors from the material plane to help a devil lord in need of mercenaries. Will you take the job?',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 9,
+                itemName: 'Bearded Devils Arm Bracelets',
+                description: 'This guantlet fills the wearer with the power of the devil. If the wearer dashes and moves at least 10 ft then it may make a single attack as a bonus action. This attack may deal +5 damage, push the target prone, or back 10 ft',
+                price: '600gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'Bearded Devil Bracers',
+                description: 'These bracers grant the wearer proficiency with martial weapons. If the wearer is already proficient in martial weapons it grants a +1 bonus to using glaives',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 11,
+                itemName: 'Bearded Devil Greaves',
+                description: 'These greaves are filled with infernal energy. They grant the wearer +10 ft of movement speed',
+                price: '350gp',
+                rarity: 'Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 53,
+        name: 'Bone Devil',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Scroll of Orders',
+                description: 'This scroll give details about the building of a vault of precious artifacts. Production of the vault is almost done. The location is in one of the nine levels of hell',
+                price: '5gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 2,
+                itemName: 'Plans to Kill',
+                description: 'On this demons person are plans to overthrow his superior. The plans are well detailed and could be done still',
+                price: '5gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 3,
+                itemName: 'Hooked Polearm',
+                description: 'A polearm made of pale white bones. The blade is coated in red. This polearm does 2d12 piercing damage and when an attack is successful it grapples the target (escape DC 14)',
+                price: '600gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 4,
+                itemName: 'Bone Devil Poison',
+                description: 'This poison can be coated on a weapon or placed in food or drink. It deals 5d6 poison damage and the target must make a DC 14 Constitution saving throw or become poisoned for 1 minute',
+                price: '300gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Bone Whip',
+                description: 'A magical +2 whip that has a range of 10 ft and deals 2d8 piercing damage. In addition it deals 2d6 poison damage',
+                price: '450gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 6,
+                itemName: 'Devils Sight Potion',
+                description: 'The Bone Devils eyes can be used to create a potion that grants devil sight for 1 hour',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 7,
+                itemName: 'Bone Devil Spines',
+                description: 'The spines of the Devil can be used to create magical +1 shortswords that deal 1d6 additional poison damage',
+                price: '300gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 8,
+                itemName: 'Bone Devil Spikes',
+                description: 'The spines of the Bone Devil can be placed on armor granting a +1 bonus to AC. Also the spiked armor deals 1d6 piercing damage to enemies who attack the wearer with melee attacks',
+                price: '400gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 9,
+                itemName: 'Bone Devil Skull',
+                description: 'The skull of the Bone Devil can be crafted into a magical helmet that gives advantage on intimidation rolls against lesser devils',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'Bone Devil Bones',
+                description: 'The bones of the devil can be used to create armor that grants resistance three times a day to all physical damage excpet from silvered weapons. The wearer may choose the attacks to apply the magic resistance',
+                price: '700gp',
+                rarity: 'Very Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 54,
+        name: 'Chain Devil',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Magical Chain',
+                description: 'This 30 ft magical chain cant be broken by non-magical means',
+                price: '100gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 2,
+                itemName: 'Torturers Kit',
+                description: 'A collection of tools and blades used to torture individuals. This set looks to be well used',
+                price: '50gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 3,
+                itemName: 'Scroll of Animation',
+                description: 'This scroll allows the user to animate one object for 10 minutes',
+                price: '300gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 4,
+                itemName: 'A Ring of Keys',
+                description: 'A ring of large metal keys. One key has the word Iron City of Dis engraved in it. A successful arcana check tells the players it holds strong magic of warding and protection. Possibly a set of prison keys',
+                price: '50gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'An Animated Chain',
+                description: 'After defeating the devil the chain seems to follow the commands of one of the party members. Use the Animate chain stats for the chain',
+                price: '600gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 6,
+                itemName: 'Prison Orders',
+                description: 'Apparently a devil has rebelled against Asmodeus and is being transfered to a new level of hell. Could be a potential ally',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 7,
+                itemName: 'Chain Mail',
+                description: 'There are enough chains here to make a nice set of +1 chain mail',
+                price: '300gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 8,
+                itemName: 'Infernal Chains',
+                description: 'These chains can be used to craft a magical +1 whip. The chains automatically grapples and requires an escape DC of 14. As long as the target is grappled it is restrained and takes 1d6 each turn',
+                price: '450gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 9,
+                itemName: 'Unnerving Mask',
+                description: 'The chains of the devil can be used to craft a fearsome mask that allows the wearer to use the Chain Devils Unnerving Mask reaction once a day',
+                price: '600gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'Magical Grappling Hook',
+                description: 'This magical chain ends with a sickly hook, when it is thrown it always lands in the correct spot and stays there till the user climbs to the top',
+                price: '100gp',
+                rarity: 'Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 55,
+        name: 'Erinyes',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Rope of Entanglement',
+                description: 'A magical rope pulsating with devilish energy. When a command word is spoken the rope flies forward to entangle a creature within 20 ft. The target must make a DC 15 Dexterity save or become restrained ',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 2,
+                itemName: 'Devil Plate Armor',
+                description: 'A full set of devil crafted plate armor. Any creature of a non-evil alignment that attempts to wear this armor takes 1d10 necrotic damage each minute the armor is worn',
+                price: '1500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 3,
+                itemName: 'Erinyes Wings',
+                description: 'These wings can be crafted into a magic item that grants the weare a 60 ft flying speed for 10 minutes a day',
+                price: '500gp',
+                rarity: ''
+            },
+            {
+                id: 4,
+                itemName: 'Erinyes Blade',
+                description: 'This pitch black longsword deals 1d8 damage and an additional 3d8 poison damage',
+                price: '700gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Erinyes Longnbow',
+                description: 'A black wood longbow pulsating with greenish spores. This bow deals 1d8 piercing damage and 3d8 poison damage. The target must make a DC 13 Constitution check or become poisoned until removed by a lesser restoration spell',
+                price: '800gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 6,
+                itemName: 'Bounty Notice',
+                description: 'A scroll containing information about a bounty. Narux a pit fiend has betrayed an archedevil and now is wanted. It says he stole a precious treasure and has fled into the material plane',
+                price: '10gp',
+                rarity: 'Common'
+            },
+            {
+                id: 7,
+                itemName: 'Erinyes Helm',
+                description: 'This black helm grants the wearer truesight for 1 minute once a day',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 8,
+                itemName: 'Erinyes Feathers',
+                description: 'The Erinyes feathers can be used to craft a potion that grants magic resistance for 1 minute',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 9,
+                itemName: 'Fabulous Boots',
+                description: 'The Erinyes boots are extremely fashionable and made of high quality metal and leather',
+                price: '100gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 10,
+                itemName: 'A Love Letter',
+                description: 'This Erinyes has a letter written to its lover saying that it seeks freedom from its constant service of war to be with him/her. In the letter are plans to escape the realms of hell and flee to the material plane',
+                price: '3gp',
+                rarity: 'Common'
+            },
+            {
+                id: 11,
+                itemName: 'A Desecrated Holy Symbol',
+                description: 'An ancient holy symbol of a long lost god. It seems well worn. Interesting it is being carried by a devil',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 12,
+                itemName: 'Erinyes Journal',
+                description: 'The journal of the Erinyes. It explains its fall from the upper planes and how it was corrupted into Asmodeus service. The Erinyes now seeks redemption but doesnt know how',
+                price: '5gp',
+                rarity: 'Common'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 56,
+        name: 'Horned Devil',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Horned Devils Fork',
+                description: 'A massive fork made of Devilish ore. It is a large weapon with a reach of 10 ft. It deals 2d8 piercing damage',
+                price: '50gp',
+                rarity: 'Common'
+            },
+            {
+                id: 2,
+                itemName: 'Horned Devil Tail',
+                description: 'This tail can be crafted into a magical +2 whip that has a 10 ft reach and deals 1d8 piercing damage. The target must make a DC 17 Constitution saving throw or lose 3d6 hitpoints each turn due to an infernal wound. A DC 12 Wisdom (Medicine) check staunches the wound.',
+                price: '1500gp',
+                rarity: 'Very Rare'
+            },
+            {
+                id: 3,
+                itemName: 'Gauntlet of Fire Hurling',
+                description: 'Using the scales of the Horned Devil you can create a guantlet that allows you to hurl fire. You can throw it 150 ft and it deals 4d6 fire damage',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 4,
+                itemName: 'Potion of Devil Sight',
+                description: 'The blood of the Horned Devil can be used to create a potion that grants devil sight for 1 hour',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Horned Devil Cloak',
+                description: 'The wings of the devil can be crafted into a magical cloak that grants the user a 60 ft flying speed',
+                price: '1,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 6,
+                itemName: 'Horned Devil Horns',
+                description: 'The horns can be placed on a helment to make yourself more intimidating to lesser devils. Gain advantage on intimidation checks against lesser demons',
+                price: '1,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 7,
+                itemName: 'Orders to Attack',
+                description: 'The devil has scroll commanding it to attack one of the small towns nearby',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 8,
+                itemName: 'Snack Food',
+                description: 'The horn devil is by nature lazy, so whenever it gets a chance it will relax and munch on its snacks',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 9,
+                itemName: 'A Magic Stone',
+                description: 'A stone filled with planar travel magic. Read and speak the rune written on the stone and open a portal to one of the nine levels of hell',
+                price: '10,000gp',
+                rarity: 'Very Rare'
+            },
+            {
+                id: 10,
+                itemName: 'A Key',
+                description: 'This looks like a key to the devils mansion. When the key is held you know the quickest way to the home. What could lie in wait?',
+                price: '3,000gp',
+                rarity: 'Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 57,
+        name: 'Ice Devil',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Map of Stygia',
+                description: 'A fully drawn map of the level of hell. Could come in handy if one were to explore it',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 2,
+                itemName: 'Map of Cania',
+                description: 'A fully drawn map of the level of hell. Could come in handy if one were to explore it',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 3,
+                itemName: 'A Journal',
+                description: 'This journal is filled with information about a Pit Fiend named Marloth. It contains rumors about its true name, and plans to overthrow the devil',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 4,
+                itemName: 'A Snowball',
+                description: 'Magic snow from one of the nine levels of hell. When thrown at an enemy they must make a DC 15 Constitution saving throw or become encased in ice',
+                price: '5,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Ice Spear',
+                description: 'A spear made of hellish ice. It deals 2d8 piercing damage and 3d6 cold damage. Also any creature hit by this spear must make a DC 15 Constitution saving throw of for one minute its speed is reduced to 10 ft, it can take either an action or a bonus action, and cant make a reaction. This save can be repeated at the end of each turn',
+                price: '10,000gp',
+                rarity: 'Very Rare'
+            },
+            {
+                id: 6,
+                itemName: 'Arm Ring of Ice Wall',
+                description: 'Once a day the wearer of this arm ring can summon a wall of ice. This ability is similar to the Ice Devils Ice Wall ability',
+                price: '4,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 7,
+                itemName: 'Ice Daggers',
+                description: 'The claws of the Ice Devil can be crafted into magical +1 daggers that deal an additional 3d6 cold damage',
+                price: '3,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 8,
+                itemName: 'Whip of Frost',
+                description: 'The tail can be crafted into a magical +2 whip that deals an additional 3d6 cold damage',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 9,
+                itemName: 'Ice Devil Blood',
+                description: 'This almost frozen icor can be crafted into a potion that grants immunity to cold damage for 10 minutes',
+                price: '1,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'Ice Devil Chitin',
+                description: 'The chitin of the Ice Devil can be crafted into a set of magical plate armor that keeps the wearer warm in below freezing conditions',
+                price: '2,500gp',
+                rarity: 'Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 58,
+        name: 'Imp',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Potion of Devil Sight',
+                description: 'The Imps blood can be used to create a potion of Devil Sight that lasts for 1 minute',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 2,
+                itemName: 'Potion of Invisibility',
+                description: 'The Imps wings can be used to create a potion of invisibility that lasts for 10 minutes',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 3,
+                itemName: 'Potion of Shapechanging',
+                description: 'The Imps brain can be used to create a potion of shapechanging that allows the drinker to transform into a rat, raven, or spider for 10 minutes',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 4,
+                itemName: 'Imp Saliva',
+                description: 'The Imps saliva can be used to create a poison. The target must make a DC 11 Constitution saving throw or take 3d6 poison damage or half as much on a success',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 5,
+                itemName: 'Pages of Magical Spells',
+                description: 'It looks like the Imp was carrying pages of magical spells. Allow the finder to learn a spell of up to level 2 as it learns the spells knowledge in the pages',
+                price: '800gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 6,
+                itemName: 'A Bundle of Alchemy Supplies',
+                description: 'The Imp was carrying a bag full of alchemy supplies. This is enough to make an alchemy kit',
+                price: '300gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 7,
+                itemName: 'Orders to Spy',
+                description: 'A Pit Fiend named Tanis wants the imp to spy on a powerful mage. The orders include pages specifying the mages location and research',
+                price: '50gp',
+                rarity: 'Common'
+            },
+            {
+                id: 8,
+                itemName: 'A Warlocks Wand',
+                description: 'Looks like this Imp stole his masters wand. Pick a level 3 warlock spell that this wand holds',
+                price: '300gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 9,
+                itemName: 'Ring of Spell Save',
+                description: 'This Ebony ring has the ability to store a single spell in it. It also allows the user to cast said spell without being magical',
+                price: '1,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'A Collection of Rubies',
+                description: 'This Imp is carrying a bag filled with rubies of various sizes',
+                price: '1,000gp',
+                rarity: 'Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
+    { id: 59,
+        name: 'Lemure',
+        loot: [
+            {
+                id: 1,
+                itemName: 'Lemure Icor',
+                description: 'This icor can be used to craft a  potion that grants Devil Sight for 10 minutes',
+                price: '500gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 2,
+                itemName: 'A Set of Wood Working Tools',
+                description: 'A set of wood working tools the deceased human use to use in its mortal life. It now carries as a reminder of its past deeds',
+                price: '10gp',
+                rarity: 'Common'
+            },
+            {
+                id: 3,
+                itemName: 'A Silver Locket',
+                description: 'This locket has a picture of an older man and woman',
+                price: '200gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 4,
+                itemName: 'A Wood Horse Toy',
+                description: 'A finely crafted wooden horse. Is it a part of the Lemures past life?',
+                price: '10gp',
+                rarity: 'Common'
+            },
+            {
+                id: 5,
+                itemName: 'A Gold Ring',
+                description: 'This gold ring has the name Katrina written inside of it. A past love?',
+                price: '100gp',
+                rarity: 'Uncommon'
+            },
+            {
+                id: 6,
+                itemName: 'A Book of Childrens Stories',
+                description: 'A book filled with fables and myths',
+                price: '5gp',
+                rarity: 'Common'
+            },
+            {
+                id: 7,
+                itemName: 'A Broken Holy Symbol',
+                description: 'Inside the mound of flesh is a broken holy symbol of Tyr. Was this creature a follower before its fall?',
+                price: '15gp',
+                rarity: 'Common'
+            },
+            {
+                id: 8,
+                itemName: 'A Bronze Chalice ',
+                description: 'This bronze chalice is encrusted with semi-precious stones. The dead lemure clutches it strongly even after death',
+                price: '25gp',
+                rarity: 'Common'
+            },
+            {
+                id: 9,
+                itemName: 'A Scroll of Atonement',
+                description: 'A spell scroll of atonement. It looks like this creature was preparing to redeem itself',
+                price: '1,000gp',
+                rarity: 'Rare'
+            },
+            {
+                id: 10,
+                itemName: 'A Devil Forged Dagger',
+                description: 'This creature was rewarded with a finely crafted dagger made of devilish ore. Its a magical +1 dagger',
+                price: '500gp',
+                rarity: 'Rare'
+            }
+        ],
+        imageUrl: "https://media-waterdeep.cursecdn.com/avatars/thumbnails/0/87/1000/1000/636252737538172594.jpeg"
+    },
 ];
 
 
 /***/ }),
 
-/***/ "./src/app/monster-detail/monster-detail.component.css":
-/*!*************************************************************!*\
-  !*** ./src/app/monster-detail/monster-detail.component.css ***!
-  \*************************************************************/
+/***/ "./src/app/MonsterManual/monster-detail/monster-detail.component.css":
+/*!***************************************************************************!*\
+  !*** ./src/app/MonsterManual/monster-detail/monster-detail.component.css ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3140,10 +3822,10 @@ module.exports = "\n\n  .center-div\n{\n  position: fixed;\n  top: 55%;\n  left:
 
 /***/ }),
 
-/***/ "./src/app/monster-detail/monster-detail.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/monster-detail/monster-detail.component.html ***!
-  \**************************************************************/
+/***/ "./src/app/MonsterManual/monster-detail/monster-detail.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/app/MonsterManual/monster-detail/monster-detail.component.html ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3151,10 +3833,10 @@ module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\
 
 /***/ }),
 
-/***/ "./src/app/monster-detail/monster-detail.component.ts":
-/*!************************************************************!*\
-  !*** ./src/app/monster-detail/monster-detail.component.ts ***!
-  \************************************************************/
+/***/ "./src/app/MonsterManual/monster-detail/monster-detail.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/app/MonsterManual/monster-detail/monster-detail.component.ts ***!
+  \**************************************************************************/
 /*! exports provided: MonsterDetailComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3162,10 +3844,10 @@ module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonsterDetailComponent", function() { return MonsterDetailComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../monster */ "./src/app/monster.ts");
+/* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../monster */ "./src/app/monster.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _monster_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../monster.service */ "./src/app/monster.service.ts");
+/* harmony import */ var _monster_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../monster.service */ "./src/app/MonsterManual/monster.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3212,8 +3894,8 @@ var MonsterDetailComponent = /** @class */ (function () {
     MonsterDetailComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-monster-detail',
-            template: __webpack_require__(/*! ./monster-detail.component.html */ "./src/app/monster-detail/monster-detail.component.html"),
-            styles: [__webpack_require__(/*! ./monster-detail.component.css */ "./src/app/monster-detail/monster-detail.component.css")]
+            template: __webpack_require__(/*! ./monster-detail.component.html */ "./src/app/MonsterManual/monster-detail/monster-detail.component.html"),
+            styles: [__webpack_require__(/*! ./monster-detail.component.css */ "./src/app/MonsterManual/monster-detail/monster-detail.component.css")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"],
             _monster_service__WEBPACK_IMPORTED_MODULE_4__["MonsterService"],
@@ -3226,73 +3908,10 @@ var MonsterDetailComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/monster-list/monster-list.component.css":
-/*!*********************************************************!*\
-  !*** ./src/app/monster-list/monster-list.component.css ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/monster-list/monster-list.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/monster-list/monster-list.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  monster-list works!\n</p>\n"
-
-/***/ }),
-
-/***/ "./src/app/monster-list/monster-list.component.ts":
-/*!********************************************************!*\
-  !*** ./src/app/monster-list/monster-list.component.ts ***!
-  \********************************************************/
-/*! exports provided: MonsterListComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonsterListComponent", function() { return MonsterListComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var MonsterListComponent = /** @class */ (function () {
-    function MonsterListComponent() {
-    }
-    MonsterListComponent.prototype.ngOnInit = function () {
-    };
-    MonsterListComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-monster-list',
-            template: __webpack_require__(/*! ./monster-list.component.html */ "./src/app/monster-list/monster-list.component.html"),
-            styles: [__webpack_require__(/*! ./monster-list.component.css */ "./src/app/monster-list/monster-list.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], MonsterListComponent);
-    return MonsterListComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/monster.service.ts":
-/*!************************************!*\
-  !*** ./src/app/monster.service.ts ***!
-  \************************************/
+/***/ "./src/app/MonsterManual/monster.service.ts":
+/*!**************************************************!*\
+  !*** ./src/app/MonsterManual/monster.service.ts ***!
+  \**************************************************/
 /*! exports provided: MonsterService */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3301,7 +3920,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonsterService", function() { return MonsterService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
-/* harmony import */ var _mock_monsters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mock-monsters */ "./src/app/mock-monsters.ts");
+/* harmony import */ var _mock_monsters__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mock-monsters */ "./src/app/MonsterManual/mock-monsters.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3336,30 +3955,10 @@ var MonsterService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/monster.ts":
-/*!****************************!*\
-  !*** ./src/app/monster.ts ***!
-  \****************************/
-/*! exports provided: Monster */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Monster", function() { return Monster; });
-var Monster = /** @class */ (function () {
-    function Monster() {
-    }
-    return Monster;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/monsters/monsters.component.css":
-/*!*************************************************!*\
-  !*** ./src/app/monsters/monsters.component.css ***!
-  \*************************************************/
+/***/ "./src/app/MonsterManual/monsters/monsters.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/MonsterManual/monsters/monsters.component.css ***!
+  \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3367,21 +3966,21 @@ module.exports = "\n\n  \n  /* When the input field gets focus, change its width
 
 /***/ }),
 
-/***/ "./src/app/monsters/monsters.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/monsters/monsters.component.html ***!
-  \**************************************************/
+/***/ "./src/app/MonsterManual/monsters/monsters.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/MonsterManual/monsters/monsters.component.html ***!
+  \****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n \n\n</head>\n\n<body>\n\n  <h1>Monsters</h1>\n  \n  <div id=\"content\">\n      <div class=\"columns\">\n    <ul>\n\n      <li *ngFor=\"let monster of monsters\">\n          <a routerLink=\"/detail/{{monster.id}}\">\n            {{monster.name}}\n          </a>\n        </li>\n    </ul>\n  </div>\n  </div>\n\n\n</body>\n\n</html>"
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n \n\n</head>\n\n<body>\n\n  <h1>Monster Manual Monsters</h1>\n  \n  <div id=\"content\">\n      <div class=\"columns\">\n    <ul>\n\n      <li *ngFor=\"let monster of monsters\">\n          <a routerLink=\"/detail/{{monster.id}}\">\n            {{monster.name}}\n          </a>\n        </li>\n    </ul>\n  </div>\n  </div>\n\n\n</body>\n\n</html>"
 
 /***/ }),
 
-/***/ "./src/app/monsters/monsters.component.ts":
-/*!************************************************!*\
-  !*** ./src/app/monsters/monsters.component.ts ***!
-  \************************************************/
+/***/ "./src/app/MonsterManual/monsters/monsters.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/MonsterManual/monsters/monsters.component.ts ***!
+  \**************************************************************/
 /*! exports provided: MonstersComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3389,7 +3988,7 @@ module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonstersComponent", function() { return MonstersComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _monster_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../monster.service */ "./src/app/monster.service.ts");
+/* harmony import */ var _monster_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../monster.service */ "./src/app/MonsterManual/monster.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3428,12 +4027,218 @@ var MonstersComponent = /** @class */ (function () {
     MonstersComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-monsters',
-            template: __webpack_require__(/*! ./monsters.component.html */ "./src/app/monsters/monsters.component.html"),
-            styles: [__webpack_require__(/*! ./monsters.component.css */ "./src/app/monsters/monsters.component.css")]
+            template: __webpack_require__(/*! ./monsters.component.html */ "./src/app/MonsterManual/monsters/monsters.component.html"),
+            styles: [__webpack_require__(/*! ./monsters.component.css */ "./src/app/MonsterManual/monsters/monsters.component.css")]
         }),
         __metadata("design:paramtypes", [_monster_service__WEBPACK_IMPORTED_MODULE_1__["MonsterService"]])
     ], MonstersComponent);
     return MonstersComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app-routing.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/app-routing.module.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _MonsterManual_monsters_monsters_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./MonsterManual/monsters/monsters.component */ "./src/app/MonsterManual/monsters/monsters.component.ts");
+/* harmony import */ var _MonsterManual_monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MonsterManual/monster-detail/monster-detail.component */ "./src/app/MonsterManual/monster-detail/monster-detail.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var routes = [
+    { path: '', redirectTo: '/monsters', pathMatch: 'full' },
+    { path: 'detail/:id', component: _MonsterManual_monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_3__["MonsterDetailComponent"] },
+    { path: 'monsters', component: _MonsterManual_monsters_monsters_component__WEBPACK_IMPORTED_MODULE_2__["MonstersComponent"] },
+];
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.component.css":
+/*!***********************************!*\
+  !*** ./src/app/app.component.css ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n\n  .center-div\n  {\n       margin: 0 auto;\n       max-width: 700px;\n  }\n\n  a{\n     font-family: 'Marcellus SC', serif;\n   }\n\n  input \n   { \n     text-align: center;\n   }\n\n  input[type=text]:focus {\n    \n    text-align: center;\n  }\n\n  #navBarSearchForm input[type=text]\n  {width:300px !important;}"
+
+/***/ }),
+
+/***/ "./src/app/app.component.html":
+/*!************************************!*\
+  !*** ./src/app/app.component.html ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  <link href=\"https://fonts.googleapis.com/css?family=Marcellus+SC\" rel=\"stylesheet\">\n  <title>Document</title>\n</head>\n\n<body>\n\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\n        <a class=\"navbar-brand\" href=\"#\">D&D 5e Monster Loot App</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n          <span class=\"navbar-toggler-icon\"></span>\n        </button>\n      \n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n          <ul class=\"navbar-nav mr-auto\">\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Monster Manual <span class=\"sr-only\">(current)</span></a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"volos\">Volo's Guide</a>\n            </li>\n            <li class=\"nav-item\">\n                <a class=\"nav-link\" href=\"#\">Mordenkainen's Tome of Foes</a>\n              </li>\n          </ul>\n          <form class=\"form-inline my-2 my-lg-0\">\n            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"...\" aria-label=\"Search\">\n            <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search Monsters</button>\n          </form>\n        </div>\n      </nav>\n\n  <br>\n  <router-outlet></router-outlet>\n\n</body>\n\n</html>\n"
+
+/***/ }),
+
+/***/ "./src/app/app.component.ts":
+/*!**********************************!*\
+  !*** ./src/app/app.component.ts ***!
+  \**********************************/
+/*! exports provided: AppComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _MonsterManual_monster_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MonsterManual/monster.service */ "./src/app/MonsterManual/monster.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AppComponent = /** @class */ (function () {
+    function AppComponent(monsterService) {
+        this.monsterService = monsterService;
+        this.title = 'Loot App';
+        this.monsters = [];
+    }
+    AppComponent.prototype.ngOnInit = function () {
+        this.getMonsters();
+    };
+    AppComponent.prototype.getMonsters = function () {
+        var _this = this;
+        this.monsterService.getMonsters()
+            .subscribe(function (monsters) { return _this.monsters = monsters; });
+    };
+    AppComponent.prototype.Search = function () {
+        var _this = this;
+        if (this.name != "") {
+            this.monsters = this.monsters.filter(function (res) {
+                return res.name.toLocaleLowerCase().match(_this.name.toLocaleLowerCase());
+            });
+        }
+        else if (this.name == "") {
+            this.ngOnInit();
+        }
+    };
+    AppComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-root',
+            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
+            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
+        }),
+        __metadata("design:paramtypes", [_MonsterManual_monster_service__WEBPACK_IMPORTED_MODULE_1__["MonsterService"]])
+    ], AppComponent);
+    return AppComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/app.module.ts":
+/*!*******************************!*\
+  !*** ./src/app/app.module.ts ***!
+  \*******************************/
+/*! exports provided: AppModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _MonsterManual_monsters_monsters_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MonsterManual/monsters/monsters.component */ "./src/app/MonsterManual/monsters/monsters.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _MonsterManual_monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./MonsterManual/monster-detail/monster-detail.component */ "./src/app/MonsterManual/monster-detail/monster-detail.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [
+                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
+                _MonsterManual_monsters_monsters_component__WEBPACK_IMPORTED_MODULE_3__["MonstersComponent"],
+                _MonsterManual_monster_detail_monster_detail_component__WEBPACK_IMPORTED_MODULE_5__["MonsterDetailComponent"],
+            ],
+            imports: [
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"],
+            ],
+            providers: [],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/monster.ts":
+/*!****************************!*\
+  !*** ./src/app/monster.ts ***!
+  \****************************/
+/*! exports provided: Monster */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Monster", function() { return Monster; });
+var Monster = /** @class */ (function () {
+    function Monster() {
+    }
+    return Monster;
 }());
 
 
